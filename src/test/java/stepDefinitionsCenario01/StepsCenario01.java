@@ -1,4 +1,4 @@
-package stepDefinitionsCenario01;
+﻿package stepDefinitionsCenario01;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -30,7 +30,8 @@ public class StepsCenario01 {
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         options.addArguments("--no-sandbox"); // Bypass OS security model
 		options.addArguments("--headless");
-	
+		//para funcionar no Jenkins é preciso informar o caminho do binário do chrome
+		options.setBinary("/home/karla/usr/share/applications");	
 		driver = new ChromeDriver(options);
    }
 
