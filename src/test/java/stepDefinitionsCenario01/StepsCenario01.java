@@ -31,7 +31,7 @@ public class StepsCenario01 {
         options.addArguments("--no-sandbox"); // Bypass OS security model
 		options.addArguments("--headless");
 		//para funcionar no Jenkins é preciso informar o caminho do binário do chrome	
-		options.setBinary("/home/karla/usr/share/applications");
+		options.setBinary(System.getProperty("user.home") + "/usr/share/applications");
 		driver = new ChromeDriver(options);
    }
 
